@@ -1,0 +1,18 @@
+{{>layouts/header}}
+
+<!--데이터를 어디로 보낼지?=action 어떻게 보낼지?=method(get,post)-->
+<form class="container" action="/articles/create" method="post">
+    <div class="mb-3">
+        <label class="form-label">제목</label>
+<!--        name에 dto에 필드 명과 동일한 이름을 넣어줘야 데이터를 받아올 수 있음-->
+        <input type="text" class="form-control" name="title">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">내용</label>
+<!--        name에 dto에 필드 명과 동일한 이름을 넣어줘야 데이터를 받아올 수 있음-->
+        <textarea class="form-control" rows="3" name="content"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{{>layouts/footer}}
